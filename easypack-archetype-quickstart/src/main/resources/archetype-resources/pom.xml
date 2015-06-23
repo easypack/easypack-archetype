@@ -25,7 +25,12 @@
 				<artifactId>easypack-maven-plugin</artifactId>
 				<version>1.0-SNAPSHOT</version>
 				<extensions>true</extensions>
-			</plugin>
+                #if($groupId != $package)
+                <configuration>
+                     <mainClass>${package}.start.Start</mainClass>
+                </configuration>
+               #end
+           </plugin>
 		</plugins>
 	</build>
 

@@ -11,7 +11,7 @@
 
 	<modules>
 	   <module>easypack-archetype-quickstart</module>
-           <module>easypack-archetype-embedded-tomcat</module>
+           <module>easypack-archetype-tomcat</module>
 	</modules>
 
 	<developers>

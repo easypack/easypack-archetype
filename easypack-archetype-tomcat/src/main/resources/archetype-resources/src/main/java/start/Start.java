@@ -52,7 +52,7 @@ public class Start {
 					IOException {
 
 				resp.getWriter().println(
-						"<h1>Welcome to the EasyPack Tomcat example</h1>");
+						"<h1>Welcome to the EasyPack Tomcat Embedded example</h1>");
 			}
 		};
 	}

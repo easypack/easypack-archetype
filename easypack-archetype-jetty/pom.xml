@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.easypack</groupId>
+	<artifactId>easypack-archetype-jetty</artifactId>
+	<packaging>jar</packaging>
+	<parent>
+		<groupId>com.github.easypack</groupId>
+		<artifactId>easypack-archetype</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<name>EasyPack Embedded Jetty Archetype</name>
+	<url>https://github.com/easypack/easypack-archetype</url>
+	<description>Maven archetype for creating a project that uses an embedded Jetty and is packaged with an EasyPack packaging</description>
+
+
+
+</project>

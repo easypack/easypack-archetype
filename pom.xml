@@ -12,6 +12,7 @@
 	<modules>
 	   <module>easypack-archetype-quickstart</module>
            <module>easypack-archetype-tomcat</module>
+           <module>easypack-archetype-jetty</module>
 	</modules>
 
 	<developers>

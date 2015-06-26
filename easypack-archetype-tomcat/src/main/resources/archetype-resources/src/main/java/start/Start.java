@@ -22,7 +22,7 @@ public class Start {
 
 		tomcat.setPort(8080);
 
-		Context ctx = tomcat.addWebapp("/",
+		Context ctx = tomcat.addWebapp("",
 				System.getProperty("java.io.tmpdir"));
 
 		Tomcat.addServlet(ctx, "helloworld", helloWorldServlet());

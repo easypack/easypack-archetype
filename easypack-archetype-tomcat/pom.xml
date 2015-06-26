@@ -11,7 +11,7 @@
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<name>EasyPack Embedded Tomcat Archetype</name>
+	<name>EasyPack Tomcat Embedded Archetype</name>
 	<url>https://github.com/easypack/easypack-archetype</url>
 	<description>Maven archetype for creating a project that uses an embedded Tomcat and is packaged with an EasyPack packaging</description>
 

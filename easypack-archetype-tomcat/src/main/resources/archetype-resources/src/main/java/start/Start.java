@@ -27,7 +27,7 @@ public class Start {
 
 		Tomcat.addServlet(ctx, "helloworld", helloWorldServlet());
 
-		ctx.addServletMapping("/helloworld", "helloworld");
+		ctx.addServletMapping("", "helloworld");
 
 		tomcat.start();
 

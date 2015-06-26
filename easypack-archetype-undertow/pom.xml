@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.easypack</groupId>
-	<artifactId>easypack-archetype-jetty</artifactId>
+	<artifactId>easypack-archetype-undertow</artifactId>
 	<packaging>jar</packaging>
 	<parent>
 		<groupId>com.github.easypack</groupId>
@@ -11,9 +11,9 @@
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<name>EasyPack Jetty Embedded Archetype</name>
+	<name>EasyPack Undertow Archetype</name>
 	<url>https://github.com/easypack/easypack-archetype</url>
-	<description>Maven archetype for creating a project that uses an embedded Jetty and is packaged with an EasyPack packaging</description>
+	<description>Maven archetype for creating a project that uses the Undertow server and is packaged with an EasyPack packaging</description>
 
 
 

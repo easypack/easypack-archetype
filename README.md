@@ -16,7 +16,7 @@ After creation, a build can be triggered, then the final artifact can be unpacke
 
 ###Archetypes
 
-* _**easypack-archetype-quickstart**_: for quick starting a project, creates the folders, a configured pom and a Start class.
+* _**easypack-archetype-quickstart**_: for quick starting a simple project, it creates the folders, a configured pom and a Start class.
 
 * _**easypack-archetype-jetty**_: creates a project that uses an [embedded Jetty](http://www.eclipse.org/jetty/documentation/current/embedding-jetty.html), with a configured pom including the minimum required dependencies and a Start class that runs the jetty container with a Servlet example.
 

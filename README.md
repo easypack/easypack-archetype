@@ -24,12 +24,23 @@ After creation, a build can be triggered, then the final artifact can be unpacke
 
 * _**easypack-archetype-undertow**_: creates a project that uses [Undertow](http://undertow.io/), with a configured pom including the minimum required dependencies and a Start class that runs the Undertow container with a Servlet example.
 
+###Not yet released but
+
+We are testing the archetypes in order to release a stable version. But if you want to try it, and help us testing meanwhile, there is a beta version that can be used. 
+
+Once the project is created you can try this:
+
+1. Build the project.
+2. Unpack the generated artifact (untar or unzip)
+3. Run the bin/start script
+4. If an embedded server project was built, hit localhost:8080
+
 ###Examples
 
-`mvn archetype:generate -DarchetypeGroupId=com.github.easypack  -DarchetypeArtifactId=easypack-archetype-quickstart -DarchetypeVersion=1.0`
+`mvn archetype:generate -DarchetypeGroupId=com.github.easypack  -DarchetypeArtifactId=easypack-archetype-quickstart -DarchetypeVersion=1.0.BETA`
 
-`mvn archetype:generate -DarchetypeGroupId=com.github.easypack  -DarchetypeArtifactId=easypack-archetype-jetty -DarchetypeVersion=1.0`
+`mvn archetype:generate -DarchetypeGroupId=com.github.easypack  -DarchetypeArtifactId=easypack-archetype-jetty -DarchetypeVersion=1.0.BETA`
 
-`mvn archetype:generate -DarchetypeGroupId=com.github.easypack  -DarchetypeArtifactId=easypack-archetype-tomcat -DarchetypeVersion=1.0`
+`mvn archetype:generate -DarchetypeGroupId=com.github.easypack  -DarchetypeArtifactId=easypack-archetype-tomcat -DarchetypeVersion=1.0.BETA`
 
-`mvn archetype:generate -DarchetypeGroupId=com.github.easypack  -DarchetypeArtifactId=easypack-archetype-undertow -DarchetypeVersion=1.0`
+`mvn archetype:generate -DarchetypeGroupId=com.github.easypack  -DarchetypeArtifactId=easypack-archetype-undertow -DarchetypeVersion=1.0.BETA`

@@ -26,7 +26,7 @@ After creation, a build can be triggered, then the final artifact can be unpacke
 
 ###Not yet released but
 
-We are testing the archetypes in order to release a stable version. But if you want to try it, and help us testing meanwhile, there is a beta version that can be used. All artifacts are available at [Mave Central Repository](ttp://repo1.maven.org/maven2/com/github/easypack/) so no extra repository configuration is required.
+We are testing the archetypes in order to release a stable version. But if you want to try it, and help us testing meanwhile, there is a beta version that can be used. All artifacts are available at [Mave Central Repository](http://repo1.maven.org/maven2/com/github/easypack/) so no extra repository configuration is required.
 
 Once the project is created you can try this:
 

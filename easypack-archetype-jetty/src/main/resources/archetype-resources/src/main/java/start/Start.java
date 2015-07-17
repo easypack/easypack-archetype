@@ -20,11 +20,20 @@ public class Start {
 	public static void main(String[] args) throws Exception {
 
 		Server server = new Server(8080);
+		
 		server.setHandler(helloWorldHandler());
+		
+		registerShutdown(server);
+
 		server.start();
+		
 		server.join();
 	}
-
+	
+	/**
+	 * Creates a Handler hello world example.
+	 * 
+	 */
 	private static Handler helloWorldHandler() {
 
 		return new AbstractHandler() {
@@ -42,4 +51,32 @@ public class Start {
 			}
 		};
 	}
+
+    /**
+	 * Registers a shut down hook for a graceful server stop.
+	 * 
+	 * @param server the Jetty server
+	 */
+	private static void registerShutdown(final Server server) {
+		
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			
+			@Override
+			public void run() {
+				
+				System.out.println("Shutting down ...");
+				
+				try {
+		
+					server.stop();
+					
+				} catch (Exception e) {
+					
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 }
+
+	

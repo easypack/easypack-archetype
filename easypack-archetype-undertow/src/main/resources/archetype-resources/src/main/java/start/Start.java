@@ -25,7 +25,37 @@ public class Start {
 					}
 				}).build();
 		
+		registerShutdown(server);
+		
 		server.start();
 
 	}
+
+	/**
+	 * Registers a shut down hook for a graceful server stop.
+	 * 
+	 * @param server
+	 *            the Undertow instance.
+	 */
+	private static void registerShutdown(final Undertow server) {
+
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+
+			@Override
+			public void run() {
+
+				System.out.println("Shutting down ...");
+
+				try {
+
+					server.stop();
+
+				} catch (Exception e) {
+
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
 }

@@ -22,13 +22,15 @@ public class Start {
 
 		tomcat.setPort(8080);
 
-		Context ctx = tomcat.addWebapp("",
-				System.getProperty("java.io.tmpdir"));
+		Context ctx = tomcat
+				.addWebapp("", System.getProperty("java.io.tmpdir"));
 
 		Tomcat.addServlet(ctx, "helloworld", helloWorldServlet());
 
 		ctx.addServletMapping("", "helloworld");
 
+		registerShutdown(tomcat);
+		
 		tomcat.start();
 
 		tomcat.getServer().await();
@@ -51,9 +53,37 @@ public class Start {
 					HttpServletResponse resp) throws ServletException,
 					IOException {
 
-				resp.getWriter().println(
-						"<h1>Welcome to the EasyPack Tomcat Embedded example</h1>");
+				resp.getWriter()
+						.println(
+								"<h1>Welcome to the EasyPack Tomcat Embedded example</h1>");
 			}
 		};
+	}
+
+	/**
+	 * Registers a shut down hook for a graceful server stop.
+	 * 
+	 * @param tomcat
+	 *            the Tomcat instance.
+	 */
+	private static void registerShutdown(final Tomcat tomcat) {
+
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+
+			@Override
+			public void run() {
+
+				System.out.println("Shutting down ...");
+
+				try {
+
+					tomcat.stop();
+
+				} catch (Exception e) {
+
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 }

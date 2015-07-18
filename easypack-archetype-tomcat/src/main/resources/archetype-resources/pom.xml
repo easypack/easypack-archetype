@@ -45,11 +45,12 @@
 				<artifactId>easypack-maven-plugin</artifactId>
 				<version>1.0-SNAPSHOT</version>
 				<extensions>true</extensions>
-                #if($groupId != $package)
                 <configuration>
-                     <mainClass>${package}.start.Start</mainClass>
+                  <shutdown>true</shutdown>
+                  #if($groupId != $package)
+                  <mainClass>${package}.start.Start</mainClass>
+                  #end
                 </configuration>
-               #end
            </plugin>
 		</plugins>
 	</build>
